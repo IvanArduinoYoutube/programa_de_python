@@ -1,0 +1,30 @@
+import random #importamos la libreria random
+
+numeros = [] #creamos una lista vacia llamada numeros
+for i in range (0,5): #creamos un bucle for que se repite 5 veces
+	numero1 = int(input('Introduce un numero: '))
+	numeros.append(numero1) #guaradamos los numeros introducidos en la lista vacia
+print('Tus numeros son %s.'% numeros) #saca la lista de numeros por pantalla
+
+for x in range(0,1): #creamos un bucle 
+	numero2 = random.choice(numeros) #elige un numero aleatorio en la lista numeros
+	numero3 = int(input('En que numero crees que estoy pensando: ')) 
+	if numero2 == numero3 :
+		print('Acertaste ;) .')
+		print('Pasemos al siguiente nivel.')
+	if numero2!=numero3 :
+		print('Intentalo de nuevo, mi numero era el %i.'% numero2)
+nombres = [] # creamos una lista vacía llamada nombres
+for k in range (0,3): #creamos un bucle
+	nombres1 =  input('Ahora dime 1 nombre: ')
+	nombres.append(nombres1)
+print('Tus nombres son %s.'% nombres)
+
+for l in range (0,3):
+	nombres2 = random.choice(nombres)
+	nombres3 = input('En que nombre crees que estoy pensando: ')
+	if nombres2 == nombres3:
+		print('Muy bien, acertaste ;) .')
+		break #en caso de acertar, terminamos con el bucle
+	if nombres2 != nombres3:
+		print('No acertaste, pensaba en %s.'% nombres2)
